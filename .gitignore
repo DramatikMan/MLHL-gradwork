@@ -1,1 +1,15 @@
-data
+notebook/data
+notebook/.ipynb_checkpoints
+
+### ~ Python ~ ###
+/pyproject.toml
+/poetry.lock
+
+### ~ Docker ~ ###
+/.dockerignore
+/Dockerfile
+/*.y*ml
+
+### ~ development ~ ###
+/.flake8
+/Makefile
