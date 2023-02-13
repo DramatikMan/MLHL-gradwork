@@ -1,6 +1,7 @@
 notebook/data
 notebook/.ipynb_checkpoints
 doc/*.docx
+*.csv
 
 ### ~ Python ~ ###
 /pyproject.toml
