@@ -2,3 +2,7 @@
 	path = app/server
 	url = git@github.com:DramatikMan/MLHL-gradwork-server.git
 	branch = main
+[submodule "app/web-UI"]
+	path = app/web-UI
+	url = git@github.com:DramatikMan/MLHL-gradwork-web-UI.git
+	branch = main
