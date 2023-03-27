@@ -1,0 +1,33 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [{name = "Sergey Pavlov", email = "self@sergeypavlov.dev"}]
+requires-python = ">=3.10"
+dependencies = [
+    "jupyter>=1.0.0",
+    "pandas>=1.5.3",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black[jupyter]>=23.1.0",
+    "mypy>=1.1.1",
+    "ruff>=0.0.259",
+]
+
+[tool.pdm.scripts]
+jupyter = "jupyter notebook --allow-root --no-browser --ip 0.0.0.0 --NotebookApp.token='' notebook"
+lint = {composite = ["black notebook", "ruff --fix notebook", "mypy --strict notebook"]}
+
+[tool.black]
+line-length = 100
+quiet = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+ignore_missing_imports = true
+show_error_codes = true

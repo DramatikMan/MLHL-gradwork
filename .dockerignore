@@ -1,0 +1,12 @@
+app
+doc
+notebook/data
+
+### ~ Docker ~ ###
+.dockerignore
+Dockerfile
+*.yml
+
+### ~ git ~ ###
+.git*
+README.md

@@ -4,14 +4,9 @@ doc/*.docx
 *.csv
 
 ### ~ Python ~ ###
-/pyproject.toml
-/poetry.lock
+__pycache__
+*.ipynb*
 
 ### ~ Docker ~ ###
-/.dockerignore
-/Dockerfile
-/*.y*ml
-
-### ~ development ~ ###
-/.flake8
-/Makefile
+/*.yml
+!/docker-compose.yml

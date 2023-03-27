@@ -1,0 +1,10 @@
+services:
+
+  jupyter:
+    build:
+      context: .
+    volumes:
+      - ./notebook:/project/notebook
+    ports:
+      - "8888:8888"
+  
