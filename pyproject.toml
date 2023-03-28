@@ -7,6 +7,8 @@ requires-python = ">=3.10"
 dependencies = [
     "jupyter>=1.0.0",
     "pandas>=1.5.3",
+    "pillow>=9.4.0",
+    "tqdm>=4.65.0",
 ]
 
 [tool.pdm.dev-dependencies]
@@ -18,7 +20,7 @@ dev = [
 
 [tool.pdm.scripts]
 jupyter = "jupyter notebook --allow-root --no-browser --ip 0.0.0.0 --NotebookApp.token='' notebook"
-lint = {composite = ["black notebook", "ruff --fix notebook", "mypy --strict notebook"]}
+lint = {composite = ["black", "ruff --fix", "mypy --strict"]} # pdm run lint notebook
 
 [tool.black]
 line-length = 100
