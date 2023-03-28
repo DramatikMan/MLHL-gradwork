@@ -9,6 +9,7 @@ dependencies = [
     "pandas>=1.5.3",
     "pillow>=9.4.0",
     "tqdm>=4.65.0",
+    "matplotlib>=3.7.1",
 ]
 
 [tool.pdm.dev-dependencies]
