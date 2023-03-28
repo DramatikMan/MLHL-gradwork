@@ -5,7 +5,6 @@ doc/*.docx
 
 ### ~ Python ~ ###
 __pycache__
-*.ipynb*
 
 ### ~ Docker ~ ###
 /*.yml
