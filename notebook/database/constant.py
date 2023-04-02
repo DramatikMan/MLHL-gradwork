@@ -1,3 +1,5 @@
+import numpy as np
+
 RGB = {
     "#FF0000": (255, 0, 0),  # red
     "#FF8000": (255, 128, 0),
@@ -27,3 +29,15 @@ RYB = {
     "#8601AF": (134, 1, 175),  # purple
     "#C21460": (194, 20, 96),  # red-purple
 }
+
+RGBt, RYBt = {}, {}
+
+for key, value in RGB.items():
+    tensor = np.zeros((224, 224, 3), dtype=np.uint8)
+    tensor[:, :] = value
+    RGBt[key] = tensor
+
+for key, value in RYB.items():
+    tensor = np.zeros((224, 224, 3), dtype=np.uint8)
+    tensor[:, :] = value
+    RYBt[key] = tensor

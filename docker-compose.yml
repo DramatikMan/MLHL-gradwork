@@ -7,4 +7,3 @@ services:
       - ./notebook:/project/notebook
     ports:
       - "8888:8888"
-  
