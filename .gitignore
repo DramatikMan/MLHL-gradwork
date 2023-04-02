@@ -2,6 +2,7 @@ notebook/data
 notebook/.ipynb_checkpoints
 doc/*.docx
 *.csv
+model
 
 ### ~ Python ~ ###
 __pycache__
