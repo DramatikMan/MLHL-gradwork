@@ -1,3 +1,15 @@
+[[tool.pdm.source]]
+name = "gitlab"
+url = "https://gitlab.com/api/v4/projects/44844627/packages/pypi/simple"
+
+[[tool.pdm.source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[tool.pdm.resolution]
+respect-source-order = true
+
 [project]
 name = ""
 version = ""
@@ -11,7 +23,9 @@ dependencies = [
     "tqdm>=4.65.0",
     "matplotlib>=3.7.1",
     "numpy>=1.24.2",
+    "color-utils>=1.0.0",
 ]
+
 
 [tool.pdm.dev-dependencies]
 dev = [
