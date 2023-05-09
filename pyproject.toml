@@ -23,7 +23,7 @@ dependencies = [
     "tqdm>=4.65.0",
     "matplotlib>=3.7.1",
     "numpy>=1.24.2",
-    "color-utils>=1.0.0",
+    "color-utils>=1.0.2",
 ]
 
 
@@ -32,17 +32,25 @@ dev = [
     "black[jupyter]>=23.1.0",
     "mypy>=1.1.1",
     "ruff>=0.0.259",
+    "isort>=5.12.0",
 ]
 
 [tool.pdm.scripts]
 jupyter = "jupyter notebook --allow-root --no-browser --ip 0.0.0.0 --NotebookApp.token='' notebook"
-lint = {composite = ["black", "ruff --fix", "mypy --strict"]} # pdm run lint notebook
+lint = {composite = ["black", "isort", "ruff", "mypy --strict"]} # pdm run lint notebook
 
 [tool.black]
 line-length = 100
 quiet = true
 
+[tool.isort]
+quiet = true
+line_length = 100
+multi_line_output = 3
+profile = "black"
+
 [tool.ruff]
+fix = true
 line-length = 100
 target-version = "py310"
 
