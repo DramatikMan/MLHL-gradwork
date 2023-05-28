@@ -1,0 +1,8 @@
+/*
+*.svg
+!/.gitignore
+!/classification_examples
+!/graphics
+!/*.bib
+!/*.pdf
+!/*.tex
