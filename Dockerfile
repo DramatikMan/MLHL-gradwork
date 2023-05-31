@@ -1,9 +1,9 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 SHELL ["/bin/bash", "-c"]
 WORKDIR /project
 ENV PYTHONPATH "${PYTHONPATH}:/project"
 
-RUN pip install "pdm==2.6.0" \
+RUN pip install "pdm==2.7.0" \
     && pdm config check_update false \
     && pdm config venv.in_project true
 
