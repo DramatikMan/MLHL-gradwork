@@ -1,0 +1,40 @@
+services:
+
+  api:
+    image: ghcr.io/dramatikman/mlhl-gradwork-server 
+    command: ./api.cmd.sh
+    env_file:
+      - ./example.env
+    volumes:
+      - ./api.cmd.sh:/app/api.cmd.sh
+      - ./database.csv:/app/database.csv
+      - ./sample:/app/sample
+      - ./model.onnx:/tmp/model/model.onnx
+
+  workers:
+    image: ghcr.io/dramatikman/mlhl-gradwork-server 
+    command: ["gwserver", "start",  "workers"]
+    env_file:
+      - ./example.env
+    volumes:
+      - ./model.onnx:/tmp/model/model.onnx
+
+  postgres:
+    image: postgres:alpine
+    env_file:
+      - ./example.env
+
+  broker:
+    image: rabbitmq:management
+
+  s3:
+    image: bitnami/minio
+    env_file:
+      - ./example.env
+
+  ui:
+    image: ghcr.io/dramatikman/mlhl-gradwork-web-ui
+    env_file:
+      - ./example.env
+    ports:
+      - "8080:8080"
